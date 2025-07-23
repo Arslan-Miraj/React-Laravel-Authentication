@@ -1,0 +1,46 @@
+| Tool / Hook                            | Purpose                                              |
+| -------------------------------------- | ---------------------------------------------------- |
+| `useState()`                           | Manage state (e.g., user info)                       |
+| `useContext()`                         | Access context like `AuthContext` globally           |
+| `createContext()`                      | Create a context container                           |
+| `useEffect()`                          | Run logic on component mount (like checking auth)    |
+| `useNavigate()`                        | Redirect users programmatically (`react-router-dom`) |
+| `useForm()`                            | From `react-hook-form`, for form management          |
+| `handleSubmit()`                       | Wraps form submission and validation logic           |
+| `register()`                           | Registers an input field for validation              |
+| `setError()`                           | Set manual errors in the form                        |
+| `Navigate` (component)                 | Redirect users in JSX                                |
+| `Link`                                 | Navigate to other routes without reloading           |
+| `localStorage.getItem()` / `setItem()` | Persist data across refreshes                        |
+| `fetch()`                              | Call backend APIs (or use `axios`)                   |
+| `react-hot-toast`                      | Show notifications / error messages                  |
+
+
+| Tool / Function                     | Purpose                                      |
+| ----------------------------------- | -------------------------------------------- |
+| `Auth::attempt()`                   | Attempt to login with given credentials      |
+| `Auth::user()`                      | Get the currently authenticated user         |
+| `Auth::logout()`                    | Log the user out                             |
+| `request()->only([...])`            | Fetch only required fields from request      |
+| `return response()->json([...])`    | Return structured JSON response              |
+| `return redirect()->route(...)`     | Redirect to a named route                    |
+| `Validator::make()`                 | Manually validate a request                  |
+| `$request->validate()`              | Automatically validate with rules            |
+| `Route::middleware('auth:sanctum')` | Protect API routes using Sanctum             |
+| `Hash::check()`                     | Check if password matches hash               |
+| `Hash::make()`                      | Hash a password on registration              |
+| `Route::post('/login', ...)`        | Define API POST route for login              |
+| `Route::get('/user', ...)`          | Fetch the logged-in user                     |
+| `config/cors.php`                   | Manage CORS settings for frontend access     |
+| `config/sanctum.php`                | Sanctum config (optional tuning)             |
+| `php artisan migrate`               | Run database migrations                      |
+| `php artisan tinker`                | Test things like user creation interactively |
+
+
+| Sanctum Tool                              | Purpose                                        |
+| ----------------------------------------- | ---------------------------------------------- |
+| `use Laravel\Sanctum\HasApiTokens;`       | Trait to enable token-based auth in User model |
+| `auth:sanctum` middleware                 | Protects routes that require auth              |
+| `/sanctum/csrf-cookie` (if using cookies) | Optional endpoint to initialize CSRF           |
+| `$request->user()`                        | Get the currently authenticated user via token |
+| `->createToken('token-name')`             | Generate personal access token                 |
