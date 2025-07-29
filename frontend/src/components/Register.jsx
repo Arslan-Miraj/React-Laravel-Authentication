@@ -82,7 +82,7 @@ const Register = () => {
                 </div>
 
                 <div className="text-center pt-4">
-                  Already have an account?&nbsp;
+                  Already have an account?;
                   <Link className="text-decoration-none text-secondary" to="/login">Login</Link>
                 </div>
               </div>
